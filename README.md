@@ -1,8 +1,13 @@
-### 博客系统和golang和Hacknews机器人
+## 博客系统和golang和Hacknews机器人
 
 地址：[MojoTV.cn](https://mojotv.cn)
 
-### 安装说明
+## Feature
+- 每天自动翻译hacknews新闻
+- Google SEO 优化
+- 使用markdown语法写博客,写代码git push来提交博客
+
+## 安装说明
 
 1. fork库到自己的github
 2. 修改名字为：`username.github.io` 或者 `organizationName.github.io`
@@ -14,7 +19,7 @@
 8. 自定义自己的评论系统  `_layouts/post.html` 第15行
 9. 站长管理平添校验代码  `_includes/header.html` 第14~20行
  
-### 分支说明
+## 分支说明
 
 - 三栏布局（master分支，基于[3-Jekyll](https://github.com/P233/3-Jekyll)）
 - 三栏布局 (bootstrap-based分支，基于Bootstrap)
