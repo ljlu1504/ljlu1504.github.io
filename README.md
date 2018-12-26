@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/dejavuzhou/dejavuzhou.github.io.svg?branch=master)](https://travis-ci.com/dejavuzhou/dejavuzhou.github.io)
+
 ## 博客系统和golang和Hacknews机器人
 
 地址：[MojoTV.cn](https://mojotv.cn)
