@@ -3,7 +3,7 @@ layout: post
 title: 8分钟创建优雅的博客网站
 category: Tool
 tags: Jekyll
-date: 2018-12-26T13:19:54+08:00
+date: 2018-12-26T17:19:54+08:00
 score: 5
 coverage: jekyll_logo.png
 keywords: Jekyll 博客 网站 Github 域名 HTTPS
@@ -85,5 +85,7 @@ description: 利用Jekyll使用GithubPages提供的网页托管服务,在CNAME�
 - [如果遇到问题请评论或者提ISSUE](https://github.com/dejavuzhou/dejavuzhou.github.io/issues)
 - [suyan](https://github.com/suyan/suyan.github.io)
 - [markdown教程](https://mojotv.cn/2018/11/21/learn-markdown.html)
+- [Liquid语法教程](https://liquid.bootcss.com/basics/types/)
+- [Jekyll教程](https://jekyllcn.com/)
 
 
