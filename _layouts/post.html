@@ -1,0 +1,42 @@
+---
+layout: base
+---
+
+{% include post_ldjson.html %}
+
+
+<article id="post__content">
+    <h1 id="post__title" data-identifier="{{ page.date | date: "%Y-%m-%d" }}">{{ page.title }}</h1>
+
+    {% include post_breadcrumb.html %}
+    {% include post_meta.html %}
+    {% include post_coverage.html %}
+
+    {{ content }}
+
+    {% include post_tags.html %}
+
+</article> <!-- end #post__content -->
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8488823422266592"
+     data-ad-slot="3907903389"></ins>
+<script>
+// if(!isMobile) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+// }
+</script>
+
+{% include share.html %}
+
+<br>
+
+<script>
+    var idcomments_acct = '43b5f1195c4058c8e3297caca2d70c2a';
+    var idcomments_post_id;
+    var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>

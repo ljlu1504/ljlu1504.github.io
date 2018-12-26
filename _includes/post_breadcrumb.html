@@ -1,0 +1,23 @@
+
+<ol vocab="http://schema.org/" typeof="BreadcrumbList" class="breadcrumb">
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage"
+           href="{{site.url}}">
+            <span property="name">MojoTV</span></a>
+        <meta property="position" content="1">
+    </li>
+    ›
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage"
+           href="{{site.url}}/404#{{page.tags[0]|default:golang}}">
+            <span property="name">{{ page.tags[0]|default:golang}}</span></a>
+        <meta property="position" content="2">
+    </li>
+    ›
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage"
+           href="{{site.url}}{{page.id}}">
+            <span property="name">{{ page.title}}</span></a>
+        <meta property="position" content="3">
+    </li>
+</ol>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include header.html %}
+</head>
+<body>
+{% include nav.html %}
+<div id="post">
+    <div id="pjax">
+    {{ content }}
+        {% include copyright.html %}
+    </div> <!-- end #pjax -->
+
+    <div id="post__toc-trigger">
+        <div id="post__toc">
+            <span id="post__toc-title">文章目录</span>
+            <ul id="post__toc-ul"></ul>
+        </div>
+    </div>
+</div> <!-- end #post -->
+
+{% include footer.html %}
+</body>
+</html>

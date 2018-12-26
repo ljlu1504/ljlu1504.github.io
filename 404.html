@@ -1,0 +1,25 @@
+---
+layout: base
+title: 全部文章分类
+---
+
+<article id="post__content">
+    <h1 id="post__title">文章全部标签</h1>
+
+    <div class="tags-items-section">
+        {% for tag in site.tags %}
+        <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+        <ul class="tags-items-posts">
+            {% for post in tag[1] %}
+            <li>
+                    <a class="post-title" href="{{ site.baseurl }}{{post.url}}">
+                        {{ post.title }}
+                        <small class="post-date">{{ post.date | date_to_string }}</small>
+                    </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+
+</article> <!-- end #post__content -->
