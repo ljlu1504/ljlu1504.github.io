@@ -258,6 +258,12 @@ a {
     background: #40464f;
 }
 
+
+.tags-items-list {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 /*---------------------------------*\
    Posts List
 \*---------------------------------*/
