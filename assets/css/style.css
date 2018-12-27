@@ -1340,23 +1340,15 @@ td > code {
     padding: 0 4px;
     position: relative;
 }
-.breadcrumb li::before,
-.breadcrumb li::after {
-    border-right: 1px solid #666666;
-    content: '';
-    display: block;
-    height: 50%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    transform: skewX(45deg);
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #9e9e9e;
+    content: "/\00a0";
 }
-.breadcrumb li::after {
-    bottom: 0;
-    top: auto;
-    transform: skewX(-45deg);
+.breadcrumb>li:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .breadcrumb li:last-of-type::before,
