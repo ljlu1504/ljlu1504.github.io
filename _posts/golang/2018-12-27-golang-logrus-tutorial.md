@@ -150,7 +150,7 @@ log.WithFields(log.Fields{
 ```
 前面的WithFields API可以规范使用者按照其提倡的方式记录日志.但是WithFields依然是可选的,因为某些场景下,使用者确实只需要记录仪一条简单的消息.
 
-通常,在一个应用中、或者应用的一部分中,都有一些固定的Field.比如在处理用户http请求时,上下文中,所有的日志都会有request_id和user_ip.为了避免每次记录日志都要使用log.WithFields(log.Fields{"request_id": request_id, "user_ip": user_ip}),我们可以创建一个logrus.Entry实例,为这个实例设置默认Fields,在上下文中使用这个logrus.Entry实例记录日志即可.
+通常,在一个应用中、或者应用的一部分中,都有一些固定的Field.比如在处理用户http请求时,上下文中,所有的日志都会有`request_id`和`user_ip`.为了避免每次记录日志都要使用log.WithFields(log.Fields{"request_id": request_id, "user_ip": user_ip}),我们可以创建一个logrus.Entry实例,为这个实例设置默认Fields,在上下文中使用这个logrus.Entry实例记录日志即可.
 
 ```shell
 requestLogger := log.WithFields(log.Fields{"request_id": request_id, "user_ip": user_ip})
@@ -193,7 +193,7 @@ func (hook *DefaultFieldHook) Levels() []log.Level {
 `logrus`官方仅仅内置了`syslog`的`hook`. 
 此外,但Github也有很多第三方的`hook`可供使用,文末将提供一些第三方`HOOK`的连接.
 
-#### 4.1 Logrus-Hook-Email
+### 4.1 Logrus-Hook-Email
 `email`这里只需用`NewMailAuthHook`方法得到`hook`,再添加即可
 
 ```go
@@ -222,7 +222,7 @@ func Email(){
 }
 ```
 
-#### 4.2 Logrus-Hook-Slack
+### 4.2 Logrus-Hook-Slack
 安装logrus-slack-pacakge `go get github.com/multiplay/go-slack`
 ```go
 import (
@@ -252,11 +252,11 @@ func Bearychat(){
     logrus.Warn("")
 }
 ```
-##### 问题一:
-但这里有个问题,那就是,lrhook里面config的变量与bearchat里面的变量不对应,导致bearchat定义的的字段不能有效设置
-但使用lrhook的好处是,在发生log时会自动发送
-##### 解决方法：
-使用webhook,构造与规定对应的json,并且可以处理macdown,只需在log发生时,手动调用即可
+#### 问题一:
+但这里有个问题,那就是,`lrhook`里面config的变量与`bearchat`里面的变量不对应,导致`bearchat`定义的的字段不能有效设置
+但使用`lrhook`的好处是,在发生`log`时会自动发送
+#### 解决方法：
+使用`webhook`,构造与规定对应的`json`,并且可以处理`macdown`,只需在`log`发生时,手动调用即可
 ```go
 func Bearyweb() {
     c := webhook.New("https://**************")
@@ -275,12 +275,12 @@ func Bearyweb() {
 }
 ```
 
-##### 问题二：
-bearchat里面都是设置对应字段,所以不能像email那样把log级别自动加上
-##### 解决方法：
-在将某个字段手动设置为想要的log级别,比如把Attachments:title字段设置为“Warn”,
+#### 问题二：
+`bearchat`里面都是设置对应字段,所以不能像email那样把log级别自动加上
+#### 解决方法：
+在将某个字段手动设置为想要的`log`级别,比如把`Attachments:title`字段设置为`“Warn”`,
 
-#### 4.3 Logrus-Hook 日志分隔
+### 4.3 Logrus-Hook 日志分隔
 logrus本身不带日志本地文件分割功能,但是我们可以通过file-rotatelogs进行日志本地文件分割. 每次当我们写入日志的时候,logrus都会调用file-rotatelogs来判断日志是否要进行切分.关于本地日志文件分割的例子网上很多,这里不再详细介绍,奉上代码：
 
 ```go
