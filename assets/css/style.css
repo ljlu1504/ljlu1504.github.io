@@ -1343,20 +1343,18 @@ td > code {
 .breadcrumb li::before,
 .breadcrumb li::after {
     border-right: 1px solid #666666;
-    content: '';
+    content: '//';
     display: block;
-    height: 50%;
+    height: 80%;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     z-index: -1;
-    transform: skewX(45deg);
 }
 .breadcrumb li::after {
     bottom: 0;
     top: auto;
-    transform: skewX(-45deg);
 }
 
 .breadcrumb li:last-of-type::before,
