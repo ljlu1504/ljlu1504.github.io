@@ -1336,31 +1336,18 @@ td > code {
 .breadcrumb li {
     display: inline-block;
     line-height: 16px;
-    margin: 0 9px 0 -10px;
-    padding: 0 4px;
+
     position: relative;
 }
-.breadcrumb li::before,
 .breadcrumb li::after {
-    border-right: 1px solid #666666;
-    content: '//';
-    display: block;
-    height: 80%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-.breadcrumb li::after {
-    bottom: 0;
-    top: auto;
+    color: #9e9e9e;
+    content: "/";
 }
 
-.breadcrumb li:last-of-type::before,
 .breadcrumb li:last-of-type::after {
     display: none;
 }
+
 
 .breadcrumb li a {
     font-size: 14px;
