@@ -6,7 +6,7 @@ description: 分享各种docker教程,go语言教程,python教程,喜欢技术,�
 date: 2017-09-28T13:07:54+08:00
 coverage: logo01.png
 category: golang
-tags: Home
+tags: 首页 入口
 ---
 
 ## 全部文章
