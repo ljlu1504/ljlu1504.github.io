@@ -6,10 +6,8 @@
 <body>
 {% include nav.html %}
 <div id="post">
-    <div id="pjax">
-    {{ content }}
-
-    </div> <!-- end #pjax -->
+    <div id="pjax">{{ content }}</div> <!-- end #pjax -->
+    {% include post_share.html %}
     {% include base_comment.html %}
     {% include base_copyright.html %}
     <div id="post__toc-trigger">
