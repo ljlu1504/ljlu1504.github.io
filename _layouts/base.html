@@ -6,19 +6,21 @@
 <body>
 {% include nav.html %}
 <div id="post">
-    <div id="pjax">
-    {{ content }}
-        {% include copyright.html %}
-    </div> <!-- end #pjax -->
-
+    <div id="pjax">{{ content }}</div> <!-- end #pjax -->
+    <div class="addon">
+        {% include addon_tags.html %}
+        {% include addon_share.html %}
+        {% include addon_comment.html %}
+    </div>
+    {% include base_copyright.html %}
     <div id="post__toc-trigger">
         <div id="post__toc">
-            <span id="post__toc-title">文章目录</span>
+            <span id="post__toc-title">目录</span>
             <ul id="post__toc-ul"></ul>
         </div>
     </div>
 </div> <!-- end #post -->
 
-{% include footer.html %}
+{% include base_js.html %}
 </body>
 </html>
