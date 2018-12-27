@@ -8,9 +8,10 @@
 <div id="post">
     <div id="pjax">
     {{ content }}
-        {% include copyright.html %}
-    </div> <!-- end #pjax -->
 
+    </div> <!-- end #pjax -->
+    {% include base_comment.html %}
+    {% include base_copyright.html %}
     <div id="post__toc-trigger">
         <div id="post__toc">
             <span id="post__toc-title">文章目录</span>
