@@ -8,3 +8,6 @@ dejavuzhou.github.io.exe
 dejavuzhou.github.io
 *.exe
 nohup
+_site
+_site/*
+Gemfile.lock

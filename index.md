@@ -35,3 +35,11 @@ tags: 首页 入口
 - [Github-dejavuzhou](https://github.com/dejavuzhou)
 - [Github-mojocn](https://github.com/mojocn)
 - [开源项目](http://captcha.mojotv.cn)
+
+## 命令
+```bash
+bundle exec jekyll build
+bundle exec jekyll build
+
+
+```

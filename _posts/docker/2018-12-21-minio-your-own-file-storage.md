@@ -111,7 +111,7 @@ minio.exe server D:\Photos
 
 ## Minio相关教程
 
-- [Docker教程:Docker安装]({{/2018/11/08/how-to-install-docker.html}})
+- [Docker教程:Docker安装](/2018/11/08/how-to-install-docker)
 - [Github-mino]()
 - [官方文档](https://docs.minio.io/cn/)
 - [Minio：一个开源的AWS S3服务器，让你老爷安卓机焕发第二春](https://studygolang.com/articles/10272)
