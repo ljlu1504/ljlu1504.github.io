@@ -7,8 +7,11 @@
 {% include nav.html %}
 <div id="post">
     <div id="pjax">{{ content }}</div> <!-- end #pjax -->
-    {% include post_share.html %}
-    {% include base_comment.html %}
+    <div class="addon">
+        {% include addon_share.html %}
+        {% include addon_adsense.html %}
+        {% include addon_comment.html %}
+    </div>
     {% include base_copyright.html %}
     <div id="post__toc-trigger">
         <div id="post__toc">

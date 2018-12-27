@@ -486,7 +486,9 @@ a {
 #pjax {
     padding: 0 5% 30px;
 }
-
+.addon {
+    padding: 0 5% 30px;
+}
 #pjax.fadeIn {
     -webkit-animation: fadeIn .3s;
     -moz-animation: fadeIn .3s;
