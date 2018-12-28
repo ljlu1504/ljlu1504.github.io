@@ -4,7 +4,16 @@
    https://github.com/P233/3-Jekyll
 \*---------------------------------*/
 
-
+var isMobile = false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    isMobile = true
+}
+if(true){
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: '{{site.gad_id}}',
+        enable_page_level_ads: true
+    });
+}
 
 // Detect window size, if less than 1280px add class 'mobile' to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
 if (isMobile && window.location.pathname != "/") {
