@@ -129,7 +129,7 @@ function afterPjax() {
             toc.append('<li class="post__toc-li post__toc-h3"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li>');
         }
     });
-    toc.append('<li class="post__toc-li post__toc-h2"><a href="#分类标签" class="js-anchor-link">分类标签</a></li>');
+    toc.append('<li class="post__toc-li post__toc-h2"><a href="#tags" class="js-anchor-link">分类标签</a></li>');
     toc.append('<li class="post__toc-li post__toc-h2"><a href="#addon_share" class="js-anchor-link">分享按钮</a></li>');
     toc.append('<li class="post__toc-li post__toc-h2"><a href="#idc-container-parent" class="js-anchor-link">精彩评论</a></li>');
     // Smooth scrolling
