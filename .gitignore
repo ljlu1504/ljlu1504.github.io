@@ -11,3 +11,5 @@ nohup
 _site
 _site/*
 Gemfile.lock
+jekyll_build.sh
+jekyll_serve.sh
