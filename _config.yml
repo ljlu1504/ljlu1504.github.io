@@ -4,7 +4,6 @@ highlighter: rouge
 mathjax: disabled
 sass:
   style: compressed
-
 # 作者信息
 author:
   name: Eric Zhou
@@ -32,7 +31,7 @@ plugins:
 categories: golang Docker CheatSheet Python Tool Raft
 
 # 排除文件夹
-exclude: [util,config,tutorials,main.go,install.sh,jekyll.sh,Gemfile,Gemfile.lock]
+exclude: [util,config,tutorials,main.go,install.sh,jekyll.sh,Gemfile,Gemfile.lock,jekyll_run.sh]
 
 # 谷歌统计ID
 ga_id: UA-129013660-1

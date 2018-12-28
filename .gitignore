@@ -13,3 +13,4 @@ _site/*
 Gemfile.lock
 jekyll_build.sh
 jekyll_serve.sh
+_temp
