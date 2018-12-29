@@ -1,2 +1,14 @@
+---
+title : Sitemap
+---
+
+{% if site.url == 'http://code.mojotv.cn' %}
+    User-agent: Googlebot
+    Disallow: /
+    User-agent: bingbot
+    Disallow: /
+{% endif %}
+
 User-agent: *
 Allow: /
+
