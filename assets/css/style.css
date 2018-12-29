@@ -547,8 +547,8 @@ h5 {
 }
 
 #post__content > p, #post__content > ul, #post__content > ol {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
 }
 
 #post__content > ol > li {
