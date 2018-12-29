@@ -12,7 +12,7 @@ title: 全部文章分类
         <ul class="tags-items-posts">
             {% for post in tag[1] %}
             <li>
-                    <a class="post-title" href="{{ site.baseurl }}{{post.url}}">
+                    <a class="post-title" href="{{post.url}}">
                         {{ post.title }}
                         <small class="post-date">{{ post.date | date_to_string }}</small>
                     </a>

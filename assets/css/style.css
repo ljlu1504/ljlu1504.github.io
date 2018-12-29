@@ -602,15 +602,6 @@ kbd {
     vertical-align: .3em;
 }
 
-iframe {
-    margin-top: 1.5em;
-}
-
-@media screen and (max-width: 585px) {
-    iframe {
-        height: 260px;
-    }
-}
 
 #post__toc-trigger {
     width: 300px;
