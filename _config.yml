@@ -13,9 +13,9 @@ author:
   github: http://github.com/dejavuzhou
 
 # 站点信息
-title: MojoTech
+title: MojoCode
 description: 一个热爱分享技术的网站,Golang,Python,Docker,Raft...
-url: https://tech.mojotv.cn
+url: http://code.mojotv.cn
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
