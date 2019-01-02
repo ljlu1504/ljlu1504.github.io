@@ -104,7 +104,7 @@ if err != nil {
 
 就像在Go中编组JSON一样，`encode/JSON`包支持`encode/decode JSON`.但是，显然还有更多的原因.web开发的十诫之一是“不要相信用户的输入”(我可能是编造的，但这很重要).
 不相信输入的一个方面是验证.您希望确保得到的输入在应用程序能够处理的范围内.
-因为我没有心情编写可以执行各种验证的包(谁还记得验证电子邮件的正则表达式?)，所以我快速地在谷歌中搜索并找到`Go Validator`包来做参数校验.
+因为我没有心情编写可以执行各种验证的包(谁还记得验证电子邮件的正则表达式?)，所以我快速地在谷歌中搜索并找到[`Go Validator`](https://github.com/asaskevich/govalidator)包来做参数校验.
 下面的代码从请求体读取，将其解包到一个结构体中，并使用`GoValidator`对其进行验证.在任何时候，如果失败，我们将发送回一个400错误的请求状态.
 
 ```go
@@ -203,3 +203,8 @@ func main() {
 相信我，我并没有在Run方法后面隐藏所有内容.这两个都是我编写的应用程序，我对其中一个(您的猜测)很满意.
 鉴于我对GO的热爱，我不会只给你留下问题而没有解决办法.
 我提出的解决方案是一个轻量级的基于依赖注入的web框架，它可以模块化您的应用程序.
+
+
+## 致谢
+- [asaskevich/govalidator](https://github.com/asaskevich/govalidator)
+- [Gorilla Mux](http://www.gorillatoolkit.org/pkg/mux)
