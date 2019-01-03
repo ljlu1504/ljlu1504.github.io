@@ -31,7 +31,7 @@ plugins:
 categories: golang Docker CheatSheet Python Tool Raft
 
 # 排除文件夹
-exclude: [util,config,tutorials,main.go,install.sh,jekyll.sh,Gemfile,Gemfile.lock,jekyll_run.sh]
+exclude: [util,config,tutorials,main.go,install.sh,jekyll.sh,Gemfile,Gemfile.lock1,jekyll_run.sh]
 
 # 谷歌统计ID
 ga_id: UA-129013660-1
