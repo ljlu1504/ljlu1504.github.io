@@ -1,6 +1,6 @@
 ---
 layout: post
-title: golang进阶:真的需要第三方go-web框架?
+title: golang进阶:真的需要第三方go-web框架
 category: golang
 tags: golang golang进阶
 description: Go的官方标准库为不使用web框架提供了一个强有力的理由.在Go中，仅使用官方标准库就可以创建复杂的web应用程序
