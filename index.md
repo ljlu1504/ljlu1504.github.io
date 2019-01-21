@@ -4,7 +4,7 @@ title: 一个热爱分享的技术网站
 keywords: Docker golang python 教程 学习 技术 分享 php go语言 数据库 redis
 description: 分享各种docker教程,go语言教程,python教程,喜欢技术,喜欢分享,把事情简单化
 date: 2017-09-28T13:07:54+08:00
-coverage: logo01.png
+coverage: logo007.jpg
 category: golang
 tags: 首页 入口
 ---
@@ -17,7 +17,7 @@ tags: 首页 入口
 {% endfor %}
 
 
-## MojoTV一个技术分享的网站
+## RyanBlog一个技术分享的网站
 - 热爱技术
 - 喜欢分享
 - 喜欢把事情简单化,程序化
@@ -30,11 +30,8 @@ tags: 首页 入口
 
 ## 联系我
 
-- [neochau@gmail.com](neochau@gmail.com)
-- [tech.mojotv.cn](https;//tech.mojotv.cn)
-- [Github-dejavuzhou](https://github.com/dejavuzhou)
-- [Github-mojocn](https://github.com/mojocn)
-- [开源项目](http://captcha.mojotv.cn)
+- [ljlu1504@gmail.com](ljlu1504@gmail.com)
+- [Github-ljlu1504](https://github.com/ljlu1504)
 
 ## 命令
 ```bash
