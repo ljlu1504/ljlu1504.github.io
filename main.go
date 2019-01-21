@@ -11,13 +11,13 @@ var gitCount = 1
 func createCmds() []util.Cmd {
 	gitCount++
 	gifConfig1 := []util.Cmd{
-		{"git", []string{"config", "--global", "user.email", "'dejavuzhou@qq.com'"}},
+		{"git", []string{"config", "--global", "user.email", "'84506525@qq.com'"}},
 	}
 	gifConfig2 := []util.Cmd{
-		{"git", []string{"config", "--global", "user.email", "'1413507308@qq.com'"}},
+		{"git", []string{"config", "--global", "user.email", "'84506525@qq.com'"}},
 	}
 	cmds := []util.Cmd{
-		{"git", []string{"config", "--global", "user.name", "'EricZhou'"}},
+		{"git", []string{"config", "--global", "user.name", "'ljlu1504'"}},
 		{"git", []string{"stash"}},
 		{"git", []string{"pull", "origin", "master"}},
 		{"git", []string{"stash", "apply"}},

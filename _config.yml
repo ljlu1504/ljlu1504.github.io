@@ -6,29 +6,29 @@ sass:
   style: compressed
 # 作者信息
 author:
-  name: Eric Zhou
-  email: dejavuzhou@qq.com
-  link: http://captcha.mojotv.cn
-  weibo: http://weibo.com/u/2706451481?is_all=1
-  github: http://github.com/dejavuzhou
+  name: Ryan Lu
+  email: 84506525@qq.com
+  # link: http://captcha.mojotv.cn
+  # weibo: http://weibo.com/u/2706451481?is_all=1
+  github: http://github.com/ljlu1504
 
 # 站点信息
-title: MojoTech
-description: 一个热爱分享技术的网站,Golang,Python,Docker,Raft...
-url: https://tech.mojotv.cn
+title: RyanBlog
+description: 一个热爱分享技术的网站,Golang,Kubernetes,Docker,Raft...
+url: https://ljlu1504.github.io
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
-avatar: /assets/image/logo01.png
-favicon: /assets/image/logo01.png
-logo: /assets/image/logo01.png
+avatar: /assets/image/logo007.jpg
+favicon: /assets/image/logo007.jpg
+logo: /assets/image/logo007.jpg
 
 # Jekyll Plugin
 # https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
 plugins:
 
 # 定义你的分类
-categories: golang Docker CheatSheet Python Tool Raft
+categories: golang Docker CheatSheet Kubernetes Tool Raft
 
 # 排除文件夹
 exclude: [util,config,tutorials,main.go,install.sh,jekyll.sh,Gemfile,Gemfile.lock,jekyll_run.sh]
@@ -47,9 +47,9 @@ webmaster_verifications:
   baidu: y8Ykqi6wQN
   360: 4f66b4f11f2ba5c4a48abf000c5e5cbd
 
-twitter:
-  username: neochau
-  card: summary
+# twitter:
+#   username: neochau
+#   card: summary
 
 facebook:
   app_id: 1234
@@ -57,11 +57,11 @@ facebook:
   admins: 1234
 
 social:
-  name: Eric Zhou
+  name: Ryan Lu
   links:
-    - https://twitter.com/neochau
-    - https://github.com/dejavuzhou
-    - https://github.com/mojocn
-    - https://github.com/JJJJJJJerk
-    - https://weibo.com/dejavuzhou/home
-    - http://captcha.mojotv.cn
+    # - https://twitter.com/neochau
+    - https://github.com/ljlu1504
+    # - https://github.com/mojocn
+    # - https://github.com/JJJJJJJerk
+    # - https://weibo.com/dejavuzhou/home
+    # - http://captcha.mojotv.cn
