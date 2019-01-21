@@ -19,9 +19,9 @@ url: https://tech.mojotv.cn
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
-avatar: /assets/image/logo01.png
-favicon: /assets/image/logo01.png
-logo: /assets/image/logo01.png
+avatar: /assets/image/logo007.jpg
+favicon: /assets/image/logo007.jpg
+logo: /assets/image/logo007.jpg
 
 # Jekyll Plugin
 # https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
