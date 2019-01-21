@@ -55,6 +55,7 @@ func main() {
 		if err != nil {
 			log.Println(err)
 		}
+		fmt.Println("finished RunCmds")
 		time.Sleep(3 * time.Hour)
 	}
 }
