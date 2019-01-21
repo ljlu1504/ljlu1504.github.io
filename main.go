@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/ljlu1504/ljlu1504.github.io/util"
 	"log"
+	"fmt"
 	"time"
 )
 
@@ -11,10 +12,10 @@ var gitCount = 1
 func createCmds() []util.Cmd {
 	gitCount++
 	gifConfig1 := []util.Cmd{
-		{"git", []string{"config", "--global", "user.email", "'84506525@qq.com'"}},
+		{"git", []string{"config", "--global", "user.email", "'ljlu1504@gmail.com'"}},
 	}
 	gifConfig2 := []util.Cmd{
-		{"git", []string{"config", "--global", "user.email", "'84506525@qq.com'"}},
+		{"git", []string{"config", "--global", "user.email", "'ljlu1504@gmail.com'"}},
 	}
 	cmds := []util.Cmd{
 		{"git", []string{"config", "--global", "user.name", "'ljlu1504'"}},
@@ -49,6 +50,7 @@ func main() {
 		if err := util.ParsemarkdownHacknews(); err != nil {
 			log.Println(err)
 		}
+		fmt.Println("finished spider")
 		_, err := util.RunCmds(createCmds())
 		if err != nil {
 			log.Println(err)
