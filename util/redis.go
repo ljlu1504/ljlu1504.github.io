@@ -1,7 +1,7 @@
 package util
 
 import (
-	"github.com/dejavuzhou/dejavuzhou.github.io/config"
+	"github.com/ljlu1504/ljlu1504.github.io/config"
 	"github.com/go-redis/redis"
 )
 

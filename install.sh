@@ -1,6 +1,6 @@
 #!/bin/bash
 
-app="dejavuzhou.github.io"
+app="ljlu1504.github.io"
 ps -aux|grep $app |grep -v grep|cut -c 9-15|xargs kill -9
 
 rm -rf $app

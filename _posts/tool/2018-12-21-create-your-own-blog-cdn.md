@@ -79,5 +79,5 @@ coverage: jekyll_logo.png
 ## More
 
 - [创建Github Page Jekyll 教程](/2018/12/21/create-your-own-blog.html)
-- [如果有什么疑问请在文章下评论](https://github.com/dejavuzhou/dejavuzhou.github.io/issues)
+- [如果有什么疑问请在文章下评论](https://github.com/ljlu1504/ljlu1504.github.io/issues)
 

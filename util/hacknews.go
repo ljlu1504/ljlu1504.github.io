@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
-	"github.com/dejavuzhou/dejavuzhou.github.io/config"
+	// "github.com/ljlu1504/ljlu1504.github.io/config"
 	"html/template"
 	"net/http"
 	"os"
@@ -28,8 +28,8 @@ func downloadHtml(url string) (*goquery.Document, error) {
 	if err != nil {
 		return nil, err
 	}
-	req.Header.Set("cookie", config.HTTP_COOKIE)
-	req.Header.Set("User-Agent", config.HTTP_USER_AGENT)
+	// req.Header.Set("cookie", config.HTTP_COOKIE)
+	// req.Header.Set("User-Agent", config.HTTP_USER_AGENT)
 	res, err := client.Do(req)
 	if err != nil {
 		return nil, err

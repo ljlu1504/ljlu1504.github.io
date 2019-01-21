@@ -77,7 +77,7 @@ func main()  {
 - `viper.ReadInConfig()` 加载配置文件内容
 - `viper.Get***` 获取配置文件中配置项的信息
 
-[viper基本用法代码地址](https://github.com/dejavuzhou/dejavuzhou.github.io/tree/master/tutorials/viper_basic)
+[viper基本用法代码地址](https://github.com/ljlu1504/ljlu1504.github.io/tree/master/tutorials/viper_basic)
 
 ## 4.viper 高级用法
 

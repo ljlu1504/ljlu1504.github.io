@@ -26,49 +26,49 @@ description: 利用Jekyll使用GithubPages提供的网页托管服务,在CNAME�
     
 ## 3. 过程
 
-### 3.1 fork库到自己的github [代码仓库地址](https://github.com/dejavuzhou/dejavuzhou.github.io)
+### 3.1 fork库到自己的github [代码仓库地址](https://github.com/ljlu1504/ljlu1504.github.io)
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork01.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork01.png)
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork02.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork02.png)
 
 ### 3.2 修改名字为：username.github.io
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork03.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork03.png)
 
 ### 3.3 clone库到本地，参考_posts中的目录结构自己创建适合自己的文章目录结构
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork04.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork04.png)
 
 ### 3.4 修改CNAME，或者删掉这个文件，使用默认域名
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork09.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork09.png)
 
 ### 3.5 (可选)自定义域名
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork05.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork05.png)
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork06.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork06.png)
 
 ### 3.6 修改_config.yml配置项
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork08.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork08.png)
 
 #### 修改config中的`stie.url` **非常重要**
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork11.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork11.png)
 
 #### 自定义自己的[analytics.google](http://analytics.google.com) 和 [google adsense](https://www.google.com/adsense)
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork12.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork12.png)
 
 #### 自定义自己的第三方评论系统 [https://www.intensedebate.com/userDash](https://www.intensedebate.com/userDash)
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork13.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork13.png)
 
 ### 3.7 访问效果
 
-![Fork github.com/dejavuzhou/dejavuzhou.github.io](/assets/image/jekyll_fork10.png)
+![Fork github.com/ljlu1504/ljlu1504.github.io](/assets/image/jekyll_fork10.png)
 
 ## 4. Youtube Video
 
@@ -82,7 +82,7 @@ description: 利用Jekyll使用GithubPages提供的网页托管服务,在CNAME�
     需要使用新的功能feature把 `_post` `image` `_config.yml` 文件进行覆盖
 
 ## 7. 致谢
-- [如果遇到问题请评论或者提ISSUE](https://github.com/dejavuzhou/dejavuzhou.github.io/issues)
+- [如果遇到问题请评论或者提ISSUE](https://github.com/ljlu1504/ljlu1504.github.io/issues)
 - [suyan](https://github.com/suyan/suyan.github.io)
 - [markdown教程](https://mojotv.cn/2018/11/21/learn-markdown.html)
 - [Liquid语法教程](https://liquid.bootcss.com/basics/types/)

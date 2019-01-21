@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/dejavuzhou/dejavuzhou.github.io/util"
+	"github.com/ljlu1504/ljlu1504.github.io/util"
 	"log"
 	"time"
 )

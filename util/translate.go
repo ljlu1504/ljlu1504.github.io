@@ -4,7 +4,7 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"encoding/json"
-	"github.com/dejavuzhou/dejavuzhou.github.io/config"
+	"github.com/ljlu1504/ljlu1504.github.io/config"
 	"io"
 	"log"
 	"math/rand"
