@@ -6,6 +6,7 @@ config/*.go
 config/env.go
 ljlu1504.github.io.exe
 ljlu1504.github.io
+gitpage.log
 *.exe
 nohup
 _site
