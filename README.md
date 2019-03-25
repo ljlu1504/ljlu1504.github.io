@@ -2,7 +2,7 @@
 
 ## 博客系统和golang和Hacknews机器人
 
-地址：[MojoTV.cn](https://mojotv.cn)
+地址：[https://ljlu1504.github.io](https://ljlu1504.github.io)
 
 ## Feature
 - 每天自动翻译hacknews新闻
