@@ -4,8 +4,8 @@ _drafts/
 .idea/
 config/*.go
 config/env.go
-dejavuzhou.github.io.exe
-dejavuzhou.github.io
+ljlu1504.github.io.exe
+ljlu1504.github.io
 *.exe
 nohup
 _site
