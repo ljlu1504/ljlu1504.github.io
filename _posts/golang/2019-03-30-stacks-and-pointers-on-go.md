@@ -64,6 +64,7 @@ https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-stacks-and-pointers
 当`Go`程序启动时，运行时会创建主`goroutine`以开始执行所有初始化代码，包括main函数内的代码。  从版本`Go1.8`开始，每个`goroutine`都有一个初始的`2,048`字节的连续内存块，形成了它的堆栈空间。 多年来，这个初始堆栈大小发生了变化，将来可能会再次发生变化。
 
 堆栈很重要，因为它为每个单独函数的提供了物理内存空间和`Frame`边界。 当主`goroutine`执行以上代码中的`main`函数时，`goroutine`的堆栈将如下所示（仅从`high level`角度来看）：
+
 ![](/assets/image/golang/golang_stacks_and_pointers_figure1.jpg)
 
 您可以在上图中看到，堆栈的一部分已被给配给`main`函数使用。 此部分称为`stack frame`，它表示了`main`函数在堆栈中的边界。 当函数被调用时，该`stack frame`作为代码运行的一部分被建立。为调用函数时执行的代码的一部分。 您还可以看到`count`变量被分配在`main`函数`frame`内的地址`0x10429fa4`处。
