@@ -64,8 +64,7 @@ https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-stacks-and-pointers
 当`Go`程序启动时，运行时会创建主`goroutine`以开始执行所有初始化代码，包括main函数内的代码。  从版本`Go1.8`开始，每个`goroutine`都有一个初始的`2,048`字节的连续内存块，形成了它的堆栈空间。 多年来，这个初始堆栈大小发生了变化，将来可能会再次发生变化。
 
 堆栈很重要，因为它为每个单独函数的提供了物理内存空间和`Frame`边界。 当主`goroutine`执行以上代码中的`main`函数时，`goroutine`的堆栈将如下所示（仅从`high level`角度来看）：
-
-![](/assets/image/golang_stacks_and_pointers_figure1.jpg)
+![](/assets/image/golang/golang_stacks_and_pointers_figure1.png)
 
 您可以在上图中看到，堆栈的一部分已被给配给`main`函数使用。 此部分称为`stack frame`，它表示了`main`函数在堆栈中的边界。 当函数被调用时，该`stack frame`作为代码运行的一部分被建立。为调用函数时执行的代码的一部分。 您还可以看到`count`变量被分配在`main`函数`frame`内的地址`0x10429fa4`处。
 
@@ -92,7 +91,7 @@ count:  Value Of[ 10 ]  Addr Of[ 0x10429fa4 ]
 ```
 如果你在第`12`行看到函数调用再次递增，你可以看到代码正按值传递`count`变量。 该值将被复制，传递并放入`increment`函数的新`frame`中。 请记住，`increment`函数只能在其自己的帧中直接读取和写入内存，因此它需要一个被传递的`count`值的副本--变量`inc`，来接收，存储和访问自己。
 就在`increment`函数内部的代码开始执行之前，`goroutine`的堆栈（仅从`high level`角度来看）将如下所示：
-![](/assets/image/golang_stacks_and_pointers_figure2.jpg)
+![](/assets/image/golang/golang_stacks_and_pointers_figure2.png)
 
 您可以看到堆栈现在有两个frame，一个用于main函数，另一个用于increment函数。 在increment函数frame内，您会看到变量inc，它包含在函数调用期间复制并传递的值10。变量inc的地址是0x10429f98，改地址值位于较低的内存地址，因为堆栈中frame是往下增长的，这只是一个实现细节，并不意味着什么。 重要的是，goroutine从main函数frame中获取count的值，并将该值copy给increment函数frame中的副本inc变量。
 函数increment内的其余代码递增并显示inc变量的“value”和“address”。
@@ -105,7 +104,7 @@ count:  Value Of[ 10 ]  Addr Of[ 0x10429fa4 ]
 inc:    Value Of[ 11 ]  Addr Of[ 0x10429f98 ]
 ```
 这是执行以上代码行后堆栈的样子：
-![](/assets/image/golang_stacks_and_pointers_figure3.jpg)
+![](/assets/image/golang/golang_stacks_and_pointers_figure3.png)
 在执行第21行和第22行之后，函数increment 返回到main函数。 然后main函数再次在第14行显示“value of”和“address of”本地变量count。
 ```go
 14    println("count:\tValue Of[",count, "]\tAddr Of[", &count, "]")
@@ -120,7 +119,7 @@ count:  Value Of[ 10 ]  Addr Of[ 0x10429fa4 ]
 
 ## 函数返回
 当函数返回到调用函数时，堆栈上的内存实际发生了什么？ 简短的回答是什么。 这是函数increment 返回后堆栈的样子：
-![](/assets/image/golang_stacks_and_pointers_figure4.jpg)
+![](/assets/image/golang/golang_stacks_and_pointers_figure4.png)
 
 堆栈空间看起来与图3完全相同，只是与increment函数关联的帧现在被认为是无效内存。 这是因为main函数的frame现在是active frame。 为函数increment分配的frame构成的内存保持不变。
 清理已返回函数frame的内存是浪费时间和不必要的，因为您不知道是否再次需要该内存。 所以函数返回时只需要将该内存区域保持原样。 在每个函数调用期间，当新的函数被调用时，被调函数新的frame被重新分配，这时该frame的堆栈存储空间被擦除干净。 这是通过初始化放置在函数frame中的任何值来完成的。 因为所有值都被初始化为至少它们的“零值”，所以堆栈在每次函数调用时都能正确清理它们。
@@ -174,7 +173,7 @@ count:  Value Of[ 10 ]  Addr Of[ 0x10429fa4 ]
 如果您传递的是User值的地址，那么该变量需要声明为* User。 即使所有指针变量都存储地址值，它们也不能传递任何地址，只能传递与指针类型相关的地址。 这是关键，共享值的原因是因为接收函数需要对该值执行读取或写入。 只有给定一个值的类型信息才能，对该值进行读取和写入。 编译器会对被“共享”的值类型与接受函数的指针类型进行检查。只有类型匹配，编译器才允许共享。
 
 这是调用函数increment后堆栈的样子：
-![图5](/assets/image/golang_stacks_and_pointers_figure5.jpg)
+![图5](/assets/image/golang/golang_stacks_and_pointers_figure5.png)
 
 您可以在上图5中看到，当使用地址作为值执行“按值传递”时堆栈的样子。 函数increment 堆栈frame内的指针变量现在指向count变量，该变量位于main函数的frame内。
 现在使用指针变量，该函数可以对位于main函数frame内的count变量执行间接读取修改写入操作。
@@ -183,7 +182,7 @@ count:  Value Of[ 10 ]  Addr Of[ 0x10429fa4 ]
 ```
 现在，字符*充当操作符并应用于指针变量。 使用*作为运算符意味着“指针指向的值”。 指针变量允许在使用它的函数框架之外进行间接内存访问。 有时，这种间接读取或写入称为对指针解引用。 函数increment仍然必须在其框架内具有指针变量，它可以直接读取以执行间接访问。
 在执行完第21行后，你可以看到堆栈的样子如下图图6：
-![图5](/assets/image/golang_stacks_and_pointers_figure6.jpg)
+![图5](/assets/image/golang/golang_stacks_and_pointers_figure6.png)
 
 该程序的最终输出如下：
 ```
