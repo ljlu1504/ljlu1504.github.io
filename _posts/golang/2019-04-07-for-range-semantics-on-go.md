@@ -7,7 +7,6 @@ description: 本文将探讨Go中for range, 值/指针语义背后的机制和�
 keywords: golang, for range, pointer, value
 date: 2019-04-07T15:19:54+08:00
 score: 5.0
-coverage: logo_go_web.png
 ---
 
 ## 原文链接

@@ -7,7 +7,6 @@ description: 本文将探讨Go中指针，堆栈，堆，逃逸分析和值/指�
 keywords: golang, stack, heap, 逃逸分析, 指针
 date: 2019-04-05T13:19:54+08:00
 score: 5.0
-coverage: logo_go_web.png
 ---
 
 ## 原文链接
