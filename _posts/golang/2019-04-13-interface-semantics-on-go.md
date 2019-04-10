@@ -14,7 +14,7 @@ https://www.ardanlabs.com/blog/2017/06/for-range-semantics.html
 
 ## 前言
 
-为了更好的理解这篇文章，最好先阅读这四篇文章，它们将理解这篇文章。
+在阅读这篇文章前会好先阅读这四篇文章，它们将理解这篇文章。
 
 四部分系列索引:
 1. [GO堆栈和指针](https://ljlu1504.github.io/2019/03/30/stacks-and-pointers-on-go)

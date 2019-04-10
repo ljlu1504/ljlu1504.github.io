@@ -18,10 +18,10 @@ https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-escape-analysis.htm
 这是四部分系列中的第二篇文章，它们将提供对Go中指针，堆栈，堆，转义分析和值/指针语义背后的机制和设计的理解。 这篇文章的重点是堆和逃逸分析。
 
 四部分系列索引:
-1. GO堆栈和指针
-2. GO逃避分析
-3. GO内存分析
-4. GO数据和语义的设计
+1. [GO堆栈和指针](https://ljlu1504.github.io/2019/03/30/stacks-and-pointers-on-go)
+2. [GO逃避分析](https://ljlu1504.github.io/2019/03/31/escape-analysis-on-go)
+3. [GO内存分析](https://ljlu1504.github.io/2019/04/05/memory-profiling-on-go)
+4. [GO数据和语义的设计](https://ljlu1504.github.io/2019/04/06/data-and-semantics-on-go)
 
 ## 介绍
 
@@ -136,6 +136,7 @@ func createUserV2() *user {
 24 }
 ```
 可以看到在第`17`行到第`20`行执行的用户值的构造。然后在第`23`行，将用户值的副本向上传递给调用栈并返回给调用者。 函数返回后，堆栈看起来像这样。
+
 ![](/assets/image/golang/golang_escape_analysis_figure1.png)
 
 可以在图`1`中看到，在调用`createUserV1`之后，两个`Stack Frame`中都存在用户值。 
@@ -153,6 +154,7 @@ func createUserV2() *user {
 35 }
 ```
 您可以看到在第`28`到`31`行使用相同的结构文字来构造用户值，但在第`34`行，返回是不同的。 不是将`user`值的副本传递回调用堆栈，而是传递`user`值的地址副本。 基于此，你可能会认为在调用之后堆栈看起来像这样。
+
 ![](/assets/image/golang/golang_escape_analysis_figure2.png)
 
 如果你在图`2`中看到的内容真的发生了，那么您就会遇到完整性问题。 指针指向调用堆栈，进入不再有效的内存。 在`main`的下一个函数调用中，指向的内存将被重新构建并重新初始化。这是逃避分析开始保持完整性的地方。 在这种情况下，编译器将判断出在`createUserV2`的堆栈框架内构造`user`值是不安全的，因此它将在堆上构造值。 这个过程将在第`28`行构造`user`值时发生。
@@ -164,6 +166,7 @@ func createUserV2() *user {
 代码表面的语法隐藏了其中真正发生的事情。 第`28`行声明的变量`u`表示`user`类型的值。 Go中的构造并没有告诉你值在内存中的位置，所以直到第`34`行的返回语句，你知道该值是否需要转义。 这意味着，即使`u`表示`user`类型的值，也必须通过隐藏的指针访问此`user`值。
 
 在函数调用之后，您可以将堆栈理解成这样。
+
 ![](/assets/image/golang/golang_escape_analysis_figure3.png)
 
 函数`createUserV2`的`Stack Frame`上的变量`u`表示`Heap`上的值，而不是`Stack`。 这意味着使用`u`来访问值，需要指针访问，而不是直观从代码看到的直接访问。 您可能会想，为什么不让`u`成为指针，因为访问它所代表的值需要使用指针呢？

@@ -17,10 +17,10 @@ https://www.ardanlabs.com/blog/2017/06/language-mechanics-on-memory-profiling.ht
 这是四部分系列中的第三篇文章，它们将提供对Go中指针，堆栈，堆，转义分析和值/指针语义背后的机制和设计的理解。 这篇文章的重点是内存性能分析。
 
 四部分系列索引:
-1. GO堆栈和指针
-2. GO逃避分析
-3. GO内存分析
-4. GO数据和语义的设计
+1. [GO堆栈和指针](https://ljlu1504.github.io/2019/03/30/stacks-and-pointers-on-go)
+2. [GO逃避分析](https://ljlu1504.github.io/2019/03/31/escape-analysis-on-go)
+3. [GO内存分析](https://ljlu1504.github.io/2019/04/05/memory-profiling-on-go)
+4. [GO数据和语义的设计](https://ljlu1504.github.io/2019/04/06/data-and-semantics-on-go)
 
 这个本文相关代码的现场演示：GopherCon新加坡（2017年） - 逃逸分析(https://engineers.sg/video/go-concurrency-live-gophercon-sg-2017--1746)
 
